@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- แสดงคำแนะนำ -->
+    <TextView
+        android:id="@+id/textViewInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="บันทึกการนอน\n1. หายใจเข้าออกเบาๆ ทิ้งไหล่ให้ลู่ลงไปเท่าที่จะทำได้\n2. ผ่อนคลายกล้ามเนื้อบนใบหน้าลงไปจนถึงปลายเท้า\n3. จินตนาการว่าคุณนอนอยู่บนก้อนเมฆในท้องฟ้าสีดำ\n4. บอกกับตัวเองว่า หยุดคิด!! ซ้ำๆ เป็นเวลา 10 วินาที"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ชื่อผู้ใช้งาน -->
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ชื่อ:"
+        app:layout_constraintTop_toBottomOf="@id/textViewInstruction"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="กรอกชื่อ"
+        app:layout_constraintStart_toEndOf="@id/textViewName"
+        app:layout_constraintTop_toTopOf="@id/textViewName"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- วันนอน -->
+    <TextView
+        android:id="@+id/textViewSleepDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="วันนอน:"
+        app:layout_constraintTop_toBottomOf="@id/editTextName"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextSleepDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="กรอกวันนอน (เช่น 2024-10-01)"
+        app:layout_constraintStart_toEndOf="@id/textViewSleepDate"
+        app:layout_constraintTop_toTopOf="@id/textViewSleepDate"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- เวลานอน -->
+    <TextView
+        android:id="@+id/textViewSleepTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="เวลานอน:"
+        app:layout_constraintTop_toBottomOf="@id/editTextSleepDate"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextSleepTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="กรอกเวลานอน (เช่น 22:00)"
+        app:layout_constraintStart_toEndOf="@id/textViewSleepTime"
+        app:layout_constraintTop_toTopOf="@id/textViewSleepTime"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- วันตื่น -->
+    <TextView
+        android:id="@+id/textViewWakeDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="วันตื่น:"
+        app:layout_constraintTop_toBottomOf="@id/editTextSleepTime"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextWakeDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="กรอกวันตื่น (เช่น 2024-10-02)"
+        app:layout_constraintStart_toEndOf="@id/textViewWakeDate"
+        app:layout_constraintTop_toTopOf="@id/textViewWakeDate"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- เวลาตื่น -->
+    <TextView
+        android:id="@+id/textViewWakeTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="เวลาตื่น:"
+        app:layout_constraintTop_toBottomOf="@id/editTextWakeDate"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextWakeTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="กรอกเวลาตื่น (เช่น 07:00)"
+        app:layout_constraintStart_toEndOf="@id/textViewWakeTime"
+        app:layout_constraintTop_toTopOf="@id/textViewWakeTime"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ปุ่มบันทึก -->
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="บันทึก"
+        app:layout_constraintTop_toBottomOf="@id/editTextWakeTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
